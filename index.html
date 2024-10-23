@@ -2,27 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie & Sparrow</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 660px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
         h1, h2 {
             margin-top: 2em;
+            margin-bottom: 1em;
         }
         a {
             color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         ul {
             padding-left: 30px;
+            margin-bottom: 1.5em;
         }
         .team-links {
-            margin-top: 1em;
+            margin-top: 1.5em;
         }
         .linkedin-logo {
             width: 16px;
@@ -33,34 +40,34 @@
             position: relative;
             top: -1px;
         }
-        
         .team-links ul {
             list-style-type: none;
             padding-left: 0;
         }
-        
         .team-links li {
             margin-bottom: 10px;
         }
-
-        /* New Video Section Styles */
+        .japanese-name {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: -15px;
+            margin-bottom: 1.5em;
+        }
         .video-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2em;
-            margin: 2em 0;
+            margin: 1.5em 0;
         }
-
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             background: #f6f8fa;
             border-radius: 6px;
         }
-
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -69,85 +76,87 @@
             height: 100%;
             border: none;
         }
-
         .video-description {
-            margin-top: 0.5em;
+            margin-top: 0.75em;
             font-size: 0.95em;
             color: #586069;
         }
-
-        @media (max-width: 600px) {
-            .video-grid {
-                gap: 1.5em;
-            }
+        .section {
+            margin-bottom: 2.5em;
         }
     </style>
 </head>
 <body>
-<h1>Cookie & Sparrow</h1>
-<p>Bridging Technology and Innovation Across Borders</p>
+    <header class="section">
+        <h1>Cookie & Sparrow</h1>
+        <p class="japanese-name">クッキー・アンド・スパロー</p>
+        <p>Bridging Technology and Innovation Across Borders</p>
+    </header>
 
-
-<h2>Featured Content</h2>
-<div class="video-grid">
-    <!-- Video 1 -->
-    <div>
-        <div class="video-container">
-						 <iframe width="560" height="315" src="https://www.youtube.com/embed/2Y8Y3sUZJww?si=jN3mseX96QONs3bt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+    <section class="section">
+        <h2>Featured Content</h2>
+        <div class="video-grid">
+            <div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/2Y8Y3sUZJww?si=jN3mseX96QONs3bt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">Analyzing Japanese Financial Disclosures using Large Language Models</p>
+            </div>
         </div>
-        <p class="video-description">Analyzing Japanese Financial Disclosures using Large Language Models</p>
-    </div>
-<h2>About Us</h2>
-<p>
-    Cookie & Sparrow brings decades of combined experience in product management, technology consulting, and strategic leadership. We specialize in AI, fintech, mobile and web product management, with a deep understanding of both US and Japanese markets.
-</p>
+    </section>
 
-<div class="team-links">
-    <ul>
-        <li><img src="images/linkedin-logo.png" alt="LinkedIn" class="linkedin-logo"><a href="https://www.linkedin.com/in/matthewhelmer/" target="_blank">Matt Helmer</a></li>
-        <li><img src="images/linkedin-logo.png" alt="LinkedIn" class="linkedin-logo"><a href="https://www.linkedin.com/in/tonkotsu/" target="_blank">Clare Lee</a></li>
-    </ul>
-</div>
+    <section class="section">
+        <h2>About Us</h2>
+        <p>
+            Cookie & Sparrow brings decades of combined experience in product management, technology consulting, and strategic leadership. We specialize in AI, fintech, mobile and web product management, with a deep understanding of both US and Japanese markets.
+        </p>
 
-<h2>Our Services</h2>
-<ul>
-    <li>Product Management Consulting</li>
-    <li>AI and Large Language Model Product Consulting</li>
-    <li>Mobile and Web Application Product Management</li>
-    <li>Market Entry and Localization Strategies</li>
-    <li>Cross-border Business Development</li>
-</ul>
-
-<!-- New Video Section -->
-<h2>Recent Media</h2>
-<div class="video-grid">
-
-    <!-- Video 2 -->
-    <div>
-        <div class="video-container">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/5bXuJvgyHDY?si=bROv-6E-kS9OQg5i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="team-links">
+            <ul>
+                <li><img src="images/linkedin-logo.png" alt="LinkedIn" class="linkedin-logo"><a href="https://www.linkedin.com/in/matthewhelmer/" target="_blank">Matt Helmer</a></li>
+                <li><img src="images/linkedin-logo.png" alt="LinkedIn" class="linkedin-logo"><a href="https://www.linkedin.com/in/tonkotsu/" target="_blank">Clare Lee</a></li>
+            </ul>
         </div>
-        <p class="video-description">Python×EDINET APIで上場企業の開示情報を自動取得する</p>
-    </div>
+    </section>
 
-    <!-- Video 3 -->
-    <div>
-        <div class="video-container">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/Jl0tiK9FSoU?si=MTjUYgcleQIndPP3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section class="section">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Product Management Consulting</li>
+            <li>AI and Large Language Model Product Consulting</li>
+            <li>Mobile and Web Application Product Management</li>
+            <li>Market Entry and Localization Strategies</li>
+            <li>Cross-border Business Development</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Recent Media</h2>
+        <div class="video-grid">
+            <div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/5bXuJvgyHDY?si=bROv-6E-kS9OQg5i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">Python×EDINET APIで上場企業の開示情報を自動取得する</p>
+            </div>
+            <div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Jl0tiK9FSoU?si=MTjUYgcleQIndPP3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">DSPyへの簡単な入門：LLMの有効性を高めるフレームワーク</p>
+            </div>
+            <div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7EptCzJ9AL8?si=SBircUK5g_Szl_OE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">Quick Intro to Programming LLMs with DSPy: Code a Math Quiz Generator</p>
+            </div>
         </div>
-        <p class="video-description">DSPyへの簡単な入門：LLMの有効性を高めるフレームワーク</p>
-    </div>
+    </section>
 
-    <!-- Video 4 -->
-    <div>
-        <div class="video-container">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/7EptCzJ9AL8?si=SBircUK5g_Szl_OE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-				<p class="video-description">Quick Intro to Programming LLMs with DSPy: Code a Math Quiz Generator</p>
-    </div>
-</div>
-
-<h2>Contact</h2>
-<p>Email: <a href="mailto:contact@cookieandsparrow.com">contact@cookieandsparrow.com</a></p>
+    <footer class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:contact@cookieandsparrow.com">contact@cookieandsparrow.com</a></p>
+    </footer>
 </body>
 </html>
