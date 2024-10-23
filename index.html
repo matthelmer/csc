@@ -25,35 +25,73 @@
             margin-top: 1em;
         }
         .linkedin-logo {
-            width: 16px; /* Reduced from 20px */
-            height: 16px; /* Reduced from 20px */
+            width: 16px;
+            height: 16px;
             vertical-align: middle;
-            margin-right: 8px; /* Increased from 5px for a bit more spacing */
-            object-fit: contain; /* Ensures the entire logo is visible */
+            margin-right: 8px;
+            object-fit: contain;
             position: relative;
-            top: -1px; /* Slight adjustment to align with text */
+            top: -1px;
         }
         
         .team-links ul {
-            list-style-type: none; /* Removes default list bullets */
+            list-style-type: none;
             padding-left: 0;
         }
         
         .team-links li {
-            margin-bottom: 10px; /* Adds some space between list items */
+            margin-bottom: 10px;
+        }
+
+        /* New Video Section Styles */
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2em;
+            margin: 2em 0;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            background: #f6f8fa;
+            border-radius: 6px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-description {
+            margin-top: 0.5em;
+            font-size: 0.95em;
+            color: #586069;
+        }
+
+        @media (max-width: 600px) {
+            .video-grid {
+                gap: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
-
 <h1>Cookie & Sparrow Consulting</h1>
-
 <p>Bridging Technology and Innovation Across Borders</p>
 
 <h2>About Us</h2>
 <p>
     Cookie & Sparrow Consulting brings decades of combined experience in product management, technology consulting, and strategic leadership. We specialize in AI, fintech, mobile and web development, with a deep understanding of both US and Japanese markets.
 </p>
+
 <div class="team-links">
     <ul>
         <li><img src="images/linkedin-logo.png" alt="LinkedIn" class="linkedin-logo"><a href="https://www.linkedin.com/in/matthewhelmer/" target="_blank">Matt Helmer</a></li>
@@ -70,8 +108,43 @@
     <li>Cross-border Business Development</li>
 </ul>
 
+<!-- New Video Section -->
+<h2>Featured Content</h2>
+<div class="video-grid">
+    <!-- Video 1 -->
+    <div>
+        <div class="video-container">
+						 <iframe width="560" height="315" src="https://www.youtube.com/embed/2Y8Y3sUZJww?si=jN3mseX96QONs3bt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+        </div>
+        <p class="video-description">Analyzing Japanese Financial Disclosures using Large Language Models</p>
+    </div>
+
+    <!-- Video 2 -->
+    <div>
+        <div class="video-container">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/5bXuJvgyHDY?si=bROv-6E-kS9OQg5i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">Python×EDINET APIで上場企業の開示情報を自動取得する</p>
+    </div>
+
+    <!-- Video 3 -->
+    <div>
+        <div class="video-container">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Jl0tiK9FSoU?si=MTjUYgcleQIndPP3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">DSPyへの簡単な入門：LLMの有効性を高めるフレームワーク</p>
+    </div>
+
+    <!-- Video 4 -->
+    <div>
+        <div class="video-container">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/7EptCzJ9AL8?si=SBircUK5g_Szl_OE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+				<p class="video-description">Quick Intro to Programming LLMs with DSPy: Code a Math Quiz Generator</p>
+    </div>
+</div>
+
 <h2>Contact</h2>
 <p>Email: <a href="mailto:contact@cookieandsparrow.com">contact@cookieandsparrow.com</a></p>
-
 </body>
 </html>
